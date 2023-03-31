@@ -20,18 +20,12 @@ app = Flask(__name__)
 # Main webpage
 @app.route('/')
 def index():
-    return render_template('index.html', first='Varick', last='Erickson')
+    return render_template('index.html', first='First', last='Last')
 
 # sensor webpage
 @app.route('/sensor')
 def sensor():
     return render_template('sensor.html', temperature=bme.temperature)
-
-#                           temperature=bme.temperature,
-#                           humidity=bme.humidity,
-#                           gas=bme.gas,
-#                           pressure=bme.pressure,
-#                           altitude=bme.altitude)
 
 # pir webpage
 @app.route('/pir')
